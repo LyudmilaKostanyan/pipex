@@ -107,6 +107,7 @@ void	proc(int argc, char **argv, char **env, t_vars *vars)
 int	main(int argc, char **argv, char **env)
 {
 	t_vars	vars;
+	int		i;
 
 	vars.status = (ft_strncmp(argv[1], "here_doc", 8)
 			|| ft_strncmp(argv[1], "here_doc", ft_strlen(argv[1])));
@@ -120,6 +121,9 @@ int	main(int argc, char **argv, char **env)
 	pipes(&vars);
 	proc(argc, argv, env, &vars);
 	close_pipes(&vars);
+	i = -1;
+	while (++i < vars.ac)
+		waitpid(vars.pid[i], 0, 0);
 	for_free(&vars);
 	return (0);
 }

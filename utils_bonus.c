@@ -36,7 +36,7 @@ void	here_doc(char *end)
 	{
 		write(1, "> ", 2);
 		a = get_next_line(0);
-		if (!ft_strncmp(a, s, ft_strlen(a)))
+		if (!a || !ft_strncmp(a, s, ft_strlen(a)))
 		{
 			free(a);
 			break ;
@@ -82,9 +82,6 @@ void	for_free(t_vars *vars)
 	int	i;
 	int	j;
 
-	i = -1;
-	while (++i < vars->ac)
-		waitpid(vars->pid[i], 0, 0);
 	free(vars->pid);
 	i = -1;
 	while (++i < vars->ac - 1)

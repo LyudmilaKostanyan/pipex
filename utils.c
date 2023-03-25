@@ -56,9 +56,6 @@ void	for_free(t_vars *vars)
 	int	i;
 	int	j;
 
-	i = -1;
-	while (++i < vars->ac)
-		waitpid(vars->pid[i], 0, 0);
 	free(vars->pid);
 	i = -1;
 	while (++i < vars->ac - 1)
