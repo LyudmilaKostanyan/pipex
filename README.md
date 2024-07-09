@@ -1,11 +1,6 @@
 # Pipex
 
-The Pipex project at 42 School is a programming assignment that focuses on understanding and implementing Unix processes, pipes, and file descriptors. It's a typical second circle project that builds on foundational C programming skills and knowledge of system calls. Here's a brief overview:
-
-### Objectives:
-- To understand and implement inter-process communication using pipes.
-- To manipulate file descriptors to redirect input and output.
-- To handle multiple processes using `fork()`, `exec()`, and related system calls.
+The Pipex project at 42 School is a programming assignment that focuses on understanding and implementing Unix processes, pipes, and file descriptors. Here's a brief overview:
 
 ### Project Requirements:
 - **Basic Setup**: The project usually involves creating a program that mimics the behavior of the shell command `|` (pipe). For example, executing `./pipex file1 cmd1 cmd2 file2` should have the same effect as `cat file1 | cmd1 | cmd2 > file2` in the shell.
